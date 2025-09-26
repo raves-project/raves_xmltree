@@ -1,5 +1,9 @@
-xmltree-rs
-==========
+# xmltree-rs
+
+> [!WARNING]
+> This is a fork of the "real" `xmltree` with support for attribute namespaces. For more information, see this issue: https://github.com/eminence/xmltree-rs/issues/13
+>
+> You should use the real `xmltree` crate instead!
 
 [Documentation](https://docs.rs/xmltree/)
 
@@ -20,22 +24,19 @@ xmltree = "0.11"
 
 ### Feature-flags
 
-* `attribute-order` - change the data structure that stores attributes to one that uses insertion order. This changes the type definition and adds another dependency.
+- `attribute-order` - change the data structure that stores attributes to one that uses insertion order. This changes the type definition and adds another dependency.
 
-* `attribute-sorted` - change the data structure that stores attributes to one that uses sorted order. This changes the type definition.
+- `attribute-sorted` - change the data structure that stores attributes to one that uses sorted order. This changes the type definition.
 
 ## Compatibility with xml-rs
-This crate will export some types from the xml-rs crate.  If your own crate also uses the xml-rs
-crate, but with a different version, the types may be incompatible.  One way to solve this is to
-only use the exported types, but sometimes that is not always possible.  In those cases you should
-use a version of xmltree that matches the version of xml-rs you are using:
+
+This crate will export some types from the xml-rs crate. If your own crate also uses the xml-rs crate, but with a different version, the types may be incompatible. One way to solve this is to only use the exported types, but sometimes that is not always possible. In those cases you should use a version of xmltree that matches the version of xml-rs you are using:
 
 | xml-rs version | xmltree version |
-|----------------|-----------------|
+| -------------- | --------------- |
 | 0.8            | 0.11            |
 | 0.7            | 0.8             |
 | 0.6            | 0.6             |
-
 
 ## Example
 
