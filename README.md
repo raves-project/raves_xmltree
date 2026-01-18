@@ -19,7 +19,7 @@ Add the following to your `Cargo.toml` file:
 
 ```toml
 [dependencies]
-xmltree = "0.11"
+xmltree = "0.12"
 ```
 
 ### Feature-flags
@@ -28,12 +28,16 @@ xmltree = "0.11"
 
 - `attribute-sorted` - change the data structure that stores attributes to one that uses sorted order. This changes the type definition.
 
-## Compatibility with xml-rs
+## Compatibility with xml crate
 
-This crate will export some types from the xml-rs crate. If your own crate also uses the xml-rs crate, but with a different version, the types may be incompatible. One way to solve this is to only use the exported types, but sometimes that is not always possible. In those cases you should use a version of xmltree that matches the version of xml-rs you are using:
+This crate will export some types from the [xml](https://crates.io/crates/xml) crate.  If your own crate also uses the xml
+crate, but with a different version, the types may be incompatible.  One way to solve this is to
+only use the exported types, but sometimes that is not always possible.  In those cases you should
+use a version of xmltree that matches the version of xml you are using:
 
-| xml-rs version | xmltree version |
-| -------------- | --------------- |
+| xml version    | xmltree version |
+|----------------|-----------------|
+| 1              | 0.12            |
 | 0.8            | 0.11            |
 | 0.7            | 0.8             |
 | 0.6            | 0.6             |
